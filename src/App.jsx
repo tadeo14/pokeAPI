@@ -30,6 +30,7 @@ function App() {
     const pokemonAleatorio = listaPokemon[indiceAleatorio];
     //guardamos el pokemon aleatorio en un estado 
     setPokemonActual(pokemonAleatorio);
+    console.log(pokemonAleatorio);
 
     generarOpciones(pokemonAleatorio,listaPokemon);
     };
@@ -38,21 +39,20 @@ function App() {
   const generarOpciones = (pokemonElegido, listaPokemon) => {
     //creamos un array donde almacenamos los nombres de los pokemones que vamos a mostrar en las opciones
     //a elegir
-    const opcionesGneradas = [pokemonElegido.name];
+    const opcionesGeneradas = [pokemonElegido.name];
   
-    while (opcionesGneradas.length < 4) {
+    while (opcionesGeneradas.length < 4) {
       //generamos un numero aleatorio para elegir un pokemon de la lista
       const pokemonAleatorio = listaPokemon[Math.floor(Math.random() * 100)].name;
       
       //verificamos que el pokemon aleatorio no este ya en la lista de opciones
-      if (!opcionesGneradas.includes(pokemomAleatorio)) {
-        opcionesGneradas.push(pokemomAleatorio);
-      }
-
-     
+      if (!opcionesGeneradas.includes(pokemonAleatorio)) {
+        opcionesGeneradas.push(pokemonAleatorio);
+      }     
     }
-    console.log(opcionesGneradas);
-  
+    //ordenamos las opciones de manera aleatoria
+    opcionesGeneradas.sort(() => Math.random() - 0.5);
+    console.log(opcionesGeneradas)
   };
   
   
