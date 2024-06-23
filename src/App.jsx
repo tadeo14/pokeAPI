@@ -62,7 +62,23 @@ function App() {
   
   return (
     <>
-      
+      <h1>quien es nuestro pokemon?</h1>
+
+      <div>
+        {pokemonActual ? (
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonActual.url.split('/')[pokemonActual.url.split('/').length - 2]}.svg`}
+            alt="imagen del pokemon"
+          />
+        ) : (
+            ''
+        )}
+        
+    </div>
+
+
+
+
+
     </>
   )
 }
