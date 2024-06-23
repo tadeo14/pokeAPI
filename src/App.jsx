@@ -1,6 +1,8 @@
 import './css/style.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   
@@ -65,14 +67,19 @@ function App() {
       <h1>quien es nuestro pokemon?</h1>
 
       <div>
+        {/* en el caso de que no muestre imagen mostrara un string vacio */}
         {pokemonActual ? (
-          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonActual.url.split('/')[pokemonActual.url.split('/').length - 2]}.svg`}
+          <img  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonActual.url.split('/')[pokemonActual.url.split('/').length - 2]}.svg`}
             alt="imagen del pokemon"
+            style={{filter: 'brightness(0) saturate(100%)'}}
           />
         ) : (
             ''
         )}
-        
+
+        {opciones.map((opcion) => {
+          return <button className='btn btn-outline-primary ms-3'>{opcion}</button>;
+        })}
     </div>
 
 
