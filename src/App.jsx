@@ -6,6 +6,7 @@ function App() {
   
   const [listaPokemones, setListaPokemones] = useState([]); 
   const [pokemonActual, setPokemonActual] = useState('');
+  const [opciones, setOpciones] = useState([]);
   
   useEffect(() => {    
     const obtenerPokemones = async () => {
@@ -52,7 +53,8 @@ function App() {
     }
     //ordenamos las opciones de manera aleatoria
     opcionesGeneradas.sort(() => Math.random() - 0.5);
-    console.log(opcionesGeneradas)
+    
+    setOpciones(opcionesGeneradas);
   };
   
   
