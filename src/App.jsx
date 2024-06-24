@@ -26,6 +26,8 @@ function App() {
   }, []);
 
   const pokemomAleatorio = (listaPokemon) => {
+    setIsVisible(false);
+    setMensaje('');
     const indiceAleatorio = Math.floor(Math.random() * 100);
     const pokemonAleatorio = listaPokemon[indiceAleatorio];
     setPokemonActual(pokemonAleatorio);
@@ -82,7 +84,10 @@ function App() {
         {mensaje ? (
           <div>
             <p className='fs-5 fw-bold ms-5'>{ mensaje}</p>
+            <button onClick={() => pokemomAleatorio(listaPokemones)} className='btn btn-primary'
+            >Volver a jugar</button>
           </div>
+          
         ) : (
             ''
         )}
