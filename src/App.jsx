@@ -10,6 +10,7 @@ function App() {
   const [pokemonActual, setPokemonActual] = useState('');
   const [opciones, setOpciones] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
+  const [mensaje, setMensaje] = useState('');
   
   useEffect(() => {    
     const obtenerPokemones = async () => {
@@ -48,9 +49,9 @@ function App() {
   const pokemonElegidoUsuario = (opcion) => {
     setIsVisible(true);
     if (pokemonActual.name === opcion) {
-      console.log('¡Felicidades! Adivinaste correctamente.');
+      setMensaje('¡Felicidades! Adivinaste correctamente.');
     } else {
-      console.log(`Lo siento, no adivinaste. Era ${pokemonActual.name}`);
+      setMensaje(`Lo siento, no adivinaste. Era ${pokemonActual.name}`);
     }
   };
   
@@ -77,6 +78,14 @@ function App() {
             className='btn btn-outline-primary ms-3'>
             {opcion}</button>;
         })}
+
+        {mensaje ? (
+          <div>
+            <p className='fs-5 fw-bold ms-5'>{ mensaje}</p>
+          </div>
+        ) : (
+            ''
+        )}
     </div>
 
 
