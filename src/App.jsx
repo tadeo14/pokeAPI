@@ -9,6 +9,7 @@ function App() {
   const [listaPokemones, setListaPokemones] = useState([]); 
   const [pokemonActual, setPokemonActual] = useState('');
   const [opciones, setOpciones] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {    
     const obtenerPokemones = async () => {
@@ -45,6 +46,7 @@ function App() {
   };
 
   const pokemonElegidoUsuario = (opcion) => {
+    setIsVisible(true);
     if (pokemonActual.name === opcion) {
       console.log('¡Felicidades! Adivinaste correctamente.');
     } else {
@@ -63,7 +65,7 @@ function App() {
         {pokemonActual ? (
           <img  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonActual.url.split('/')[pokemonActual.url.split('/').length - 2]}.svg`}
             alt="imagen del pokemon"
-            style={{filter: 'brightness(0) saturate(100%)'}}
+            style={isVisible ? {} : {filter: 'brightness(0) saturate(100%)'}}
           />
         ) : (
             ''
