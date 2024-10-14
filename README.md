@@ -1,8 +1,22 @@
-# React + Vite
+# ¿Quién es nuestro Pokémon?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un juego interactivo desarrollado en **React** que utiliza la [PokeAPI](https://pokeapi.co/) para obtener una lista de Pokémon y desafiar al usuario a adivinar el Pokémon correcto entre varias opciones.
 
-Currently, two official plugins are available:
+## Descripción del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación carga una lista de 100 Pokémon al azar y selecciona uno de ellos para que el usuario intente adivinar cuál es, eligiendo entre cuatro opciones. Si la respuesta es correcta, se muestra un mensaje de felicitación. Si la respuesta es incorrecta, se informa al usuario cuál era el Pokémon correcto. El usuario puede volver a jugar tantas veces como desee.
+
+### Características principales:
+
+- Carga de una lista de Pokémon desde la PokeAPI.
+- Generación de un Pokémon aleatorio para adivinar.
+- Visualización de una imagen oculta del Pokémon para aumentar la dificultad.
+- Opción de volver a jugar con un nuevo Pokémon aleatorio.
+- Estilos aplicados con **Bootstrap** para un diseño sencillo y atractivo.
+
+## Tecnologías utilizadas
+
+- **React**: Biblioteca principal para la creación de la interfaz.
+- **Axios**: Para realizar solicitudes HTTP a la PokeAPI.
+- **Bootstrap**: Framework CSS para el diseño de los componentes.
+- **PokeAPI**: API pública utilizada para obtener la lista de Pokémon.
