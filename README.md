@@ -2,7 +2,7 @@
 
 Este proyecto es un juego interactivo desarrollado en **React** que utiliza la [PokeAPI](https://pokeapi.co/) para obtener una lista de Pokémon y desafiar al usuario a adivinar el Pokémon correcto entre varias opciones.
 
-Puedes ver la aplicación desplegada aquí: [Formulario de práctica](https://pokeapibytadeo.netlify.app/)
+Puedes ver la aplicación desplegada aquí: [Que pokemon es?](https://pokeapibytadeo.netlify.app/)
 
 ## Descripción del proyecto
 
